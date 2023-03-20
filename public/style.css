@@ -1,0 +1,579 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main > div {
+  display: flex;
+}
+
+:root {
+  --groen: #3a7e79;
+  --blauw: #152a42;
+  --geel: #f4eb34;
+  --black: #000000;
+  --pinda: #3a7e79;
+  --lichtgroen: #d5edee;
+}
+
+h1 {
+  color: var(--blauw);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1.2em auto;
+  width: 100%;
+  margin-top: -5em;
+  padding-bottom: 0.5em;
+}
+
+h2 {
+  color: var(--groen);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  width: 100%;
+  padding-top: 0.1em;
+}
+
+.arrow-left {
+  padding-right: 0.5em;
+  opacity: 20%;
+}
+
+.arrow-right {
+  padding-left: 0.5em;
+  opacity: 20%;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
+h3 {
+  color: var(--blauw);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+p {
+  color: #152a42;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  padding: 2em auto;
+  width: 100%;
+}
+
+/* HET MENU */
+
+.viniminilogo {
+  width: 142px;
+  margin-top: -4em;
+  margin-left: -7em;
+  position: absolute;
+}
+
+.img-patroon {
+  width: 420px;
+  position: absolute;
+  height: 443px;
+  left: 75%;
+  top: -10%;
+  z-index: -1;
+}
+
+nav {
+  width: 100%;
+  height: 245px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 4em;
+  font-family: montserrat, sans-serif;
+  margin-top: 72px;
+  margin-left: 7em;
+  font-style: var(--black);
+  z-index: 1;
+}
+
+li:hover {
+  color: var(--groen);
+  transition: 0.5s;
+}
+
+.icon {
+  padding-right: 0.5em;
+  margin-bottom: -2px;
+}
+
+.icon-user {
+  padding-right: 0.5em;
+  margin-bottom: -2px;
+}
+
+.arrow {
+  padding-left: 1em;
+  margin-bottom: -4px;
+}
+
+div {
+  display: block;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: var(--lichtgroen);
+  color: var(--blauw);
+  /* padding: 0px; */
+  font-size: 16px;
+  /* border-radius: 20px; */
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  width: 195px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  align-content: right;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  font-family: "Montserrat", sans-serif;
+  width: 195px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: var(--groen);
+}
+
+/* Checklist */
+
+.checklist-h2 {
+  color: var(--blauw);
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  width: 100%;
+}
+
+.datum {
+  font-family: "Montserrat", sans-serif;
+  flex: 0 0 auto;
+  font-size: 12px;
+  padding: 3px;
+  margin-bottom: 2px;
+  line-height: 12px;
+  color: var(--blauw);
+  text-decoration: none;
+}
+
+.aantekening {
+  color: #152a42;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 300;
+  padding: 2em auto;
+  width: 100%;
+}
+
+#date {
+  color: #87898b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  border: none;
+  height: 25px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  padding: 2em;
+  border-radius: 1em;
+  background: rgba(244, 235, 52, 0.4);
+  border: none;
+  border-color: var(--geel);
+}
+
+button {
+  background-color: var(--pinda);
+  border: none;
+  text-align: center;
+  color: var(--lichtgroen);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  height: 40px;
+  width: 100px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #04504b;
+  transition: 0.5s;
+  color: white;
+}
+
+.checklist {
+  /* border: 2px;
+    border-color: var(--groen);
+    color: var(--groen); */
+  padding: 2em;
+}
+
+label {
+  color: var(--blauw);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 300;
+  padding: 2em auto;
+  width: 100%;
+  line-height: 1.5em;
+}
+
+.fieldset-dagboek {
+  padding: 2em;
+  margin-left: 30px;
+  border-radius: 1em;
+  background: var(--lichtgroen);
+  border: none;
+  border-color: var(--geel);
+  width: 400px;
+}
+
+/* Dagboek invoerveldje */
+#dagboek {
+  height: 10em;
+  width: 25em;
+  border: none;
+  border-radius: 0.5em;
+}
+
+/* Agenda */
+.agenda {
+  background: rgba(58, 126, 121, 0.4);
+  padding: 2em;
+  text-align: left;
+  border-radius: 1em;
+}
+
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
+}
+
+#calendar {
+  margin-left: 2%;
+  margin-bottom: 2%;
+  margin-top: 30px;
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+caption {
+  color: var(--blauw);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1em;
+  width: 100%;
+}
+
+#calendar .weekdays {
+  background: var(--groen);
+  border-radius: 0.5em;
+}
+
+#calendar .weekdays th {
+  text-align: center;
+  line-height: 20px;
+  border: none;
+  padding: 10px 6px;
+  color: #fff;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#calendar td,
+#calendar th {
+  padding: 2px;
+  box-sizing: border-box;
+  border: 1px solid rgb(239, 239, 239);
+  font-family: "Montserrat", sans-serif;
+}
+
+#calendar td {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+#calendar tr,
+#calendar tbody {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -internal-center;
+}
+
+#calendar tr,
+#calendar tbody {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+#calendar .other-month {
+  background: rgba(58, 126, 121, 0.05);
+  color: #666;
+  font-family: "Montserrat", sans-serif;
+}
+
+#calendar .event {
+  flex: 0 0 auto;
+  font-size: 13px;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 5px;
+  line-height: 14px;
+  background: #e4f2f2;
+  border: 1px solid #b5dbdc;
+  color: var(--groen);
+  text-decoration: none;
+}
+
+.event-time {
+  flex: 0 0 auto;
+  font-size: 10px;
+  padding: 3px;
+  margin-bottom: 2px;
+  line-height: 12px;
+  background: #e4f2f2;
+  color: var(--groen);
+  text-decoration: none;
+}
+
+#calendar .date {
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 4px;
+  color: --blauw;
+  width: 26px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  align-self: flex-end;
+}
+
+/* Checklist en agenda containers */
+
+@container sidebar (min-width:750px) {
+  .checklist {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .fieldset-dagboek {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .container {
+    container-type: inline-size;
+    container-name: sidebar;
+    color: var(--groen);
+  }
+}
+
+footer {
+  padding: 1em;
+}
+
+/* Mediaquery kleiner scherm */
+
+@media (max-width: 876px) {
+  .nav-links ul li {
+    display: none;
+  }
+
+  .nav-links ul li a {
+    display: none;
+  }
+
+  .nav-links ul li a:hover {
+    display: none;
+  }
+
+  .menu {
+    /* background-color:var(--geel);
+    border-radius: 5%; */
+    border: none;
+    color: #152a42;
+    position: relative;
+    display: block;
+  }
+}
+
+@media (max-width: 750px) {
+  #calendar,
+  #calendar tr,
+  #calendar tbody {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #calendar .weekdays,
+  #calendar .other-month {
+    display: none;
+  }
+  #calendar .weekdays {
+    background: var(--groen);
+  }
+
+  #calendar tr {
+    grid-column: 1 / 2;
+  }
+
+  #calendar,
+  #calendar tr,
+  #calendar tbody {
+    grid-template-columns: 1fr;
+  }
+
+  #calendar tr,
+  #calendar tbody {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+  }
+
+  tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+  }
+
+  table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+  }
+
+  #calendar td {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #calendar td,
+  #calendar th {
+    padding: 4px;
+    box-sizing: border-box;
+    border: 1px solid #b5dbdc;
+  }
+
+  td {
+    display: table-cell;
+    vertical-align: inherit;
+  }
+}

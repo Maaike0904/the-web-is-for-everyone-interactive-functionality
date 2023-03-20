@@ -1,0 +1,40 @@
+<%- include('./partials/head.ejs') %>
+
+<div>
+
+    <div>
+
+        <button class="button-tips-left button">&#10094;</button>
+        <button class="button-tips-right button">&#10095;</button>
+
+        <% producten.forEach(product => { %>
+            <% if(product.categorie.titel === "Ei") { %> 
+              
+                <% product.tips.forEach(function(tip) { %>
+                    <article>
+                        <h2>Belangrijke tips:</h2>
+                        <ul> 
+                            <li><%= tip.tekst %></li>
+                        </ul>
+                    </article>
+                  <% }); %>
+                       
+            
+            <% } %>
+        <% }); %>
+        </div>
+        
+        <% producten.forEach(product => { %>
+            <% if(product.categorie.titel === "Ei") { %>   
+                <article>
+                    <h2><%= product.titel %></h2>
+                    <% if(product.titel === "Mijn eerste ei in 3 stappen") { %>   
+                        <img class="article-img" src="/Ei-in-3-stappen.png" alt="Ei in 3 stappen">
+                    <% } %>
+                </article>
+            <% } %>   
+        <% }); %>
+ 
+</div>
+
+<%- include('./partials/foot.ejs') %>
