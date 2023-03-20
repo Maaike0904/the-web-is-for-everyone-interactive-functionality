@@ -23,7 +23,7 @@ member.get("/new", (request, response) => {
   const data = {
     squad: request.query.squad || null,
   };
-  response.render("memberForm.ejs", data);
+  response.render("index.ejs", data);
 });
 
 // Handel het versturen van het formulier af

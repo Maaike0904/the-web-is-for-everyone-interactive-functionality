@@ -1,19 +1,21 @@
-// OUD
-
 export default index;
 
 import express from "express";
+import indexRoute from "./routes/index.js";
+import memberRoute from "./routes/member.js";
 
 // basis url voor de api
 const url = "https://api.vinimini.fdnd.nl/api/v1";
 
 // Maak een nieuwe express app
-const app = express();
+const server = express();
 
 // Stel in hoe we express gebruiken
-app.set("view engine", "ejs");
-app.set("views", "./views");
-app.use(express.static("public"));
+server.set("view engine", "ejs");
+server.set("views", "./views");
+
+// Stel de public map in
+server.use(express.static("public"));
 
 // Maak een route voor de index
 // dit plak je aan de basis url van de api, /categories
@@ -51,7 +53,7 @@ async function fetchJson(url) {
     .catch((error) => error);
 }
 
-// JUSTUS
+// JUSTUS - GECOMBINEERD MET EIGEN CODE
 // import express from "express";
 // import indexRoute from "./routes/index.js";
 // import memberRoute from "./routes/member.js";
