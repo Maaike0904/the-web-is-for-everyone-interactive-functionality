@@ -1,21 +1,17 @@
-export default index;
+console.log("cooll");
 
 import express from "express";
-import indexRoute from "./routes/index.js";
-import memberRoute from "./routes/member.js";
 
 // basis url voor de api
 const url = "https://api.vinimini.fdnd.nl/api/v1";
 
 // Maak een nieuwe express app
-const server = express();
+const app = express();
 
 // Stel in hoe we express gebruiken
-server.set("view engine", "ejs");
-server.set("views", "./views");
-
-// Stel de public map in
-server.use(express.static("public"));
+app.set("view engine", "ejs");
+app.set("views", "./views");
+app.use(express.static("public"));
 
 // Maak een route voor de index
 // dit plak je aan de basis url van de api, /categories
@@ -52,34 +48,3 @@ async function fetchJson(url) {
     .then((response) => response.json())
     .catch((error) => error);
 }
-
-// JUSTUS - GECOMBINEERD MET EIGEN CODE
-// import express from "express";
-// import indexRoute from "./routes/index.js";
-// import memberRoute from "./routes/member.js";
-
-// // Maak een nieuwe express app
-// const server = express();
-
-// // Stel het poortnummer in
-// server.set("port", process.env.PORT || 8000);
-
-// // Stel de view engine in
-// server.set("view engine", "ejs");
-// server.set("views", "./views");
-
-// // Stel de public map in
-// server.use(express.static("public"));
-
-// // Stel afhandeling van formulieren in
-// server.use(express.json());
-// server.use(express.urlencoded({ extended: true }));
-
-// // Stel de routes in
-// server.use("/", indexRoute);
-// server.use("/member", memberRoute);
-
-// // Start met luisteren
-// server.listen(server.get("port"), () => {
-//   console.log(`Application started on http://localhost:${server.get("port")}`);
-// });
