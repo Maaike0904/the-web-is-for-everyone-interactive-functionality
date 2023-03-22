@@ -71,7 +71,6 @@ h3 {
 
 p {
   color: #152a42;
-  text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 0.88rem;
   font-weight: 400;
@@ -228,17 +227,6 @@ div {
   width: 100%;
 }
 
-#date {
-  color: #87898b;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.88rem;
-  font-weight: 400;
-  border: none;
-  height: 25px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
 fieldset {
   padding: 2em;
   border-radius: 1em;
@@ -247,11 +235,12 @@ fieldset {
   border-color: var(--geel);
 }
 
-button {
+button,
+.button {
   background-color: var(--pinda);
   border: none;
   text-align: center;
-  color: var(--lichtgroen);
+  color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 0.88rem;
   font-weight: 400;
@@ -263,7 +252,8 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+button:hover,
+.button:hover {
   background-color: #04504b;
   transition: 0.5s;
   color: white;
@@ -281,12 +271,13 @@ label {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 0.88rem;
-  font-weight: 300;
+  font-weight: 350;
   padding: 2em auto;
   width: 100%;
   line-height: 1.5em;
 }
 
+/* Dagboek invoerveldje */
 .fieldset-dagboek {
   padding: 2em;
   margin-left: 30px;
@@ -294,18 +285,55 @@ label {
   background: var(--lichtgroen);
   border: none;
   border-color: var(--geel);
-  width: 400px;
 }
 
-/* Dagboek invoerveldje */
-#dagboek {
-  height: 10em;
-  width: 25em;
+.fieldset-form {
+  background: none;
+  padding: 0;
+}
+
+label {
+  border-color: #04504b;
+}
+
+#date,
+textarea {
+  color: #87898b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 320;
   border: none;
-  border-radius: 0.5em;
+  height: 1em;
+  width: 18em;
+  padding: 1.2em;
+  margin-top: 0.3em;
+  margin-bottom: 0.4em;
 }
 
-/* Agenda */
+textarea {
+  color: #87898b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 320;
+  border: none;
+  height: 10em;
+  width: 18em;
+  padding: 1em;
+  margin-top: 0.3em;
+  margin-bottom: 0.4em;
+}
+
+input[type="file"] {
+  color: #87898b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 320;
+  padding: 1em;
+  margin-top: 0.3em;
+  margin-bottom: 0.4em;
+}
+
+/* Kaleder */
 .agenda {
   background: rgba(58, 126, 121, 0.4);
   padding: 2em;
@@ -388,7 +416,7 @@ tr {
 th {
   display: table-cell;
   vertical-align: inherit;
-  font-weight: bold;
+  font-weight: 600;
   text-align: -internal-center;
 }
 
@@ -451,12 +479,7 @@ tbody {
 /* Checklist en agenda containers */
 
 @container sidebar (min-width:750px) {
-  .checklist {
-    display: grid;
-    grid-template-columns: 0.2fr 1fr;
-    grid-template-rows: 1fr;
-  }
-
+  .checklist,
   .fieldset-dagboek {
     display: grid;
     grid-template-columns: 0.2fr 1fr;
@@ -471,7 +494,12 @@ tbody {
 }
 
 footer {
-  padding: 1em;
+  color: #acbbcb;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  padding: 2em;
+  width: 100%;
 }
 
 /* Mediaquery kleiner scherm */

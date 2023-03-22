@@ -76,20 +76,31 @@
 </div>
 <!-- Checklist container end -->
 
-<!-- Dagboek deel -->
-
+<!-- Dagboek formulier deel -->
+<!-- Geen gebruik gemaakt van fieldset omdat het maar een kleine invullijst is -->
 <div class="container">
     <section class="fieldset-dagboek">
-        <h3 class="checklist-h2">Dagboek</h3>
-      
-    <label for="discription"><i>Wat wilt u noteren?</i>
-      <br><input type="text" id="dagboek">
-    </label>
-      <br><button>Noteer</button>
-    </section>
-</div>
+      <h3 class="checklist-h2">Dagboek</h3>
 
-<!-- Dagboek deel end -->
+      <form action="" method="">
+        <fieldset class="fieldset-form">
+            <label for="date">Van welke dag wilt u iets noteren?</label>
+            <br><input id="date" type="date">
+        </fieldset>
+        <fieldset class="fieldset-form">
+            <label for="opmerking">Dit wil ik graag noteren:</label>
+            <br><textarea id="opmerking" placeholder="Vul hier in..."></textarea>
+        </fieldset>  
+        <fieldset class="fieldset-form">
+            <label for="file">Voeg een foto toe:</label>
+            <br><input id="file" type="file" accept="image/*">
+            <br><input class="button" type="submit" value="Opslaan" /> 
+        </fieldset>
+      </form>
+</div>
+    </section>
+
+<!-- Dagboek formulier deel end -->
 </div>
 
 <!-- calendar deel -->
