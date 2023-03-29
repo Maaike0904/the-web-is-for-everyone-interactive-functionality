@@ -230,6 +230,7 @@ div {
 fieldset {
   padding: 2em;
   border-radius: 1em;
+  margin-right: -25px;
   background: rgba(244, 235, 52, 0.4);
   border: none;
   border-color: var(--geel);
@@ -260,9 +261,6 @@ button:hover,
 }
 
 .checklist {
-  /* border: 2px;
-    border-color: var(--groen);
-    color: var(--groen); */
   padding: 2em;
 }
 
@@ -281,15 +279,11 @@ label {
 .fieldset-dagboek {
   padding: 2em;
   margin-left: 30px;
+  margin-right: 5px;
   border-radius: 1em;
   background: var(--lichtgroen);
   border: none;
   border-color: var(--geel);
-}
-
-.fieldset-form {
-  background: none;
-  padding: 0;
 }
 
 label {
@@ -297,7 +291,10 @@ label {
 }
 
 #date,
-textarea {
+textarea,
+#herinnering,
+#datum,
+#dagboek {
   color: #87898b;
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
