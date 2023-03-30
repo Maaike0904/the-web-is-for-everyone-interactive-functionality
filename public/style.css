@@ -112,7 +112,9 @@ ul {
   margin-top: 72px;
   margin-left: 7em;
   font-style: var(--black);
-  z-index: 1;
+  z-index: 0;
+  /* Ik weet dat dit niet de beste oplossing is, er klopt iets niet met mijn nav, 
+maar voor nu kan ik door */
 }
 
 li:hover {
@@ -320,7 +322,7 @@ textarea {
   margin-bottom: 0.4em;
 }
 
-input[type="file"] {
+/* input[type="file"] {
   color: #87898b;
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
@@ -328,9 +330,9 @@ input[type="file"] {
   padding: 1em;
   margin-top: 0.3em;
   margin-bottom: 0.4em;
-}
+} */
 
-/* Kaleder */
+/* Kalender */
 .agenda {
   background: rgba(58, 126, 121, 0.4);
   padding: 2em;
@@ -349,10 +351,9 @@ table {
 
 #calendar {
   margin-left: 2%;
+  margin-right: 2%;
   margin-bottom: 2%;
   margin-top: 30px;
-  width: 60%;
-  display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
 
@@ -546,10 +547,6 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  #calendar .weekdays,
-  #calendar .other-month {
-    display: none;
-  }
   #calendar .weekdays {
     background: var(--groen);
   }
@@ -600,5 +597,160 @@ footer {
   td {
     display: table-cell;
     vertical-align: inherit;
+  }
+
+  li a {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  main > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Kalender */
+  .agenda {
+    background: rgba(58, 126, 121, 0.4);
+    padding: 2em;
+    text-align: left;
+    border-radius: 1em;
+  }
+
+  table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+  }
+
+  #calendar {
+    margin-left: 5%;
+    margin-bottom: 2%;
+    margin-right: 5%;
+    margin-top: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  caption {
+    color: var(--blauw);
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1em;
+    width: 100%;
+  }
+
+  #calendar .weekdays {
+    background: var(--groen);
+    border-radius: 0.5em;
+  }
+
+  #calendar .weekdays th {
+    text-align: center;
+    line-height: 20px;
+    border: none;
+    padding: 10px 6px;
+    color: #fff;
+    font-size: 13px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  #calendar td,
+  #calendar th {
+    padding: 2px;
+    box-sizing: border-box;
+    border: 1px solid rgb(239, 239, 239);
+    font-family: "Montserrat", sans-serif;
+  }
+
+  #calendar td {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #calendar tr,
+  #calendar tbody {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+  }
+
+  th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: 600;
+    text-align: -internal-center;
+  }
+
+  #calendar tr,
+  #calendar tbody {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+
+  #calendar .other-month {
+    background: rgba(58, 126, 121, 0.05);
+    color: #666;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  #calendar .event {
+    flex: 0 0 auto;
+    font-size: 13px;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 5px;
+    line-height: 14px;
+    background: #e4f2f2;
+    border: 1px solid #b5dbdc;
+    color: var(--groen);
+    text-decoration: none;
+  }
+
+  .event-time {
+    flex: 0 0 auto;
+    font-size: 10px;
+    padding: 3px;
+    margin-bottom: 2px;
+    line-height: 12px;
+    background: #e4f2f2;
+    color: var(--groen);
+    text-decoration: none;
+  }
+
+  #calendar .date {
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 4px;
+    color: --blauw;
+    width: 26px;
+    border-radius: 50%;
+    flex: 0 0 auto;
+    align-self: flex-end;
   }
 }

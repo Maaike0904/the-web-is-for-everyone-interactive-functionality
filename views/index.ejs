@@ -4,18 +4,23 @@
   <h1>Planning van Sam - Pinda</h1>
 <!-- Titel  end -->
 
+    <h2><ion-icon class="arrow-left" name="caret-back-outline"></ion-icon> Maart <ion-icon class="arrow-right" name="caret-forward-outline"></ion-icon>
+
 <!-- Filteren -->
   <div class="dropdown">
   <button class="dropbtn">Kies het allergeen<span><ion-icon class="arrow-1" name="chevron-down-outline"></ion-icon></span></button>
   <div class="dropdown-content">
 
-
+  <% categories.forEach(category => { %>
+      <p><a href="/<%= category.titel %>"><%= category.titel %></a></p>
+<% }) %>
 
   </div>
   </div>
 <!-- Filteren einde -->
 
-    <h2><ion-icon class="arrow-left" name="caret-back-outline"></ion-icon> Maart <ion-icon class="arrow-right" name="caret-forward-outline"></ion-icon></h2>
+
+    </h2>
 
 <div>
 
@@ -91,7 +96,7 @@
     
         <!-- TITEL -->
         <label for="dagboek">Voor welke mini wilt u een notitie maken?<span>(verplicht)</span></label>
-        <br><input name="titel" id="dagboek" type="text" required>
+        <br><input name="titel" id="dagboek" type="text" placeholder="Naam" required>
 
         <!-- BESCHRIJVING -->
         <br><label for="beschrijving">Notitie<span>(verplicht)</span></label>

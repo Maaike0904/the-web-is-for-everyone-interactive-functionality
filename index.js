@@ -11,6 +11,15 @@ server.use(express.static("public"));
 server.set("view engine", "ejs");
 server.set("views", "./views");
 
+// dit plak je aan de basis url van de api, /producten
+// server.get("/", async (request, response) => {
+//   let productenUrl = url + "/producten";
+
+//   fetchJson(productenUrl).then((data) => {
+//     response.render("index", data);
+//   });
+// });
+
 // Stel afhandeling van formulieren in
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
@@ -18,12 +27,17 @@ server.use(express.urlencoded({ extended: true }));
 //hier komen de routes
 
 server.get("/", (request, response) => {
-  const baseUrl = "https://api.vinimini.fdnd.nl/api/v1/";
-  const samId = "notities?id=clemozv3c3eod0bunahh71sx7";
-  const url = `${baseUrl}${samId}`;
-
-  fetchJson(url).then((data) => {
-    response.render("index", data);
+  const baseUrl = "https://api.vinimini.fdnd.nl/api/v1";
+  const samId = "/notities?id=clemozv3c3eod0bunahh71sx7";
+  const notitiesUrl = `${baseUrl}${samId}`;
+  fetchJson(notitiesUrl).then((notitiesData) => {
+    let categoriesUrl = baseUrl + "/categories";
+    fetchJson(categoriesUrl).then((categoriesData) => {
+      response.render("index", {
+        categories: categoriesData.categories,
+        notities: notitiesData.notities,
+      });
+    });
   });
 });
 
