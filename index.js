@@ -86,6 +86,48 @@ async function fetchJson(url) {
     .catch((error) => error);
 }
 
+// route naar pinda.ejs
+app.get("/Pinda", async (request, response) => {
+  let productenUrl = url + "/producten";
+
+  await fetchJson(productenUrl).then((data) => {
+    response.render("Pinda", data);
+  });
+});
+
+// pagina's zonder inhoud van andere allergenen
+app.get("/Amandel", (request, response) => {
+  response.render("Amandel");
+});
+
+app.get("/Schelp", (request, response) => {
+  response.render("Schelp");
+});
+
+server.get("/Ei", (request, response) => {
+  response.render("Ei");
+});
+
+server.get("/Soja", (request, response) => {
+  response.render("Soja");
+});
+
+server.get("/Vis", (request, response) => {
+  response.render("Vis");
+});
+
+server.get("/Hazelnoot", (request, response) => {
+  response.render("Hazelnoot");
+});
+
+server.get("/Walnoot", (request, response) => {
+  response.render("Walnoot");
+});
+
+server.get("/Cashewnoot", (request, response) => {
+  response.render("Cashewnoot");
+});
+
 /**
  * postJson() is a wrapper for the experimental node fetch api. It fetches the url
  * passed as a parameter using the POST method and the value from the body paramater

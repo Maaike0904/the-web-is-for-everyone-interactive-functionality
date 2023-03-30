@@ -4,21 +4,23 @@
   <h1>Planning van Sam - Ei</h1>
 <!-- Titel  end -->
 
+    <h2><ion-icon class="arrow-left" name="caret-back-outline"></ion-icon> Maart <ion-icon class="arrow-right" name="caret-forward-outline"></ion-icon>
+
 <!-- Filteren -->
   <div class="dropdown">
   <button class="dropbtn">Kies het allergeen<span><ion-icon class="arrow-1" name="chevron-down-outline"></ion-icon></span></button>
   <div class="dropdown-content">
 
   <% categories.forEach(category => { %>
-      <a href="/<%= category.titel %>"><%= category.titel %></a>
-<% }); %>
+      <p><a href="/<%= category.titel %>"><%= category.titel %></a></p>
+<% }) %>
 
   </div>
   </div>
 <!-- Filteren einde -->
 
 
-    <h2><ion-icon class="arrow-left" name="caret-back-outline"></ion-icon> Maart <ion-icon class="arrow-right" name="caret-forward-outline"></ion-icon></h2>
+    </h2>
 
 <div>
 
@@ -90,21 +92,25 @@
     <section class="fieldset-dagboek">
       <h3 class="checklist-h2">Dagboek</h3>
 
-      <form action="" method="">
-        <fieldset class="fieldset-form">
-            <label for="date">Van welke dag wilt u iets noteren?</label>
-            <br><input id="date" type="date">
-        </fieldset>
-        <fieldset class="fieldset-form">
-            <label for="opmerking">Dit wil ik graag noteren:</label>
-            <br><textarea id="opmerking" placeholder="Vul hier in..."></textarea>
-        </fieldset>  
-        <fieldset class="fieldset-form">
-            <label for="file">Voeg een foto toe:</label>
-            <br><input id="file" type="file" accept="image/*">
-            <br><input class="button" type="submit" value="Opslaan" /> 
-        </fieldset>
-      </form>
+<form action="/" method="post">
+    
+        <!-- TITEL -->
+        <label for="dagboek">Voor welke mini wilt u een notitie maken?<span>(verplicht)</span></label>
+        <br><input name="titel" id="dagboek" type="text" placeholder="Naam" required>
+
+        <!-- BESCHRIJVING -->
+        <br><label for="beschrijving">Notitie<span>(verplicht)</span></label>
+        <br><textarea id="beschrijving" name="beschrijving" placeholder="Vul hier jouw notitie in" required></textarea>
+    
+        <br><label for="herinnering">Herinnering</label>
+        <br><input name="herinnering" id="herinnering" type="datetime-local">
+
+        <br><label for="datum">Datum</label>
+        <br><input name="datum" id="datum" type="datetime-local">
+
+    <br><button type="submit">Versturen</button>
+
+</form>
 </div>
     </section>
 
@@ -323,8 +329,8 @@ src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
 nomodule
 src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
 ></script>
-<!-- ICON INSTALLATION -->
+<!-- EIND ICON INSTALLATION -->
 
-</body>
 
+</main>
 <%- include('./partials/foot.ejs') %>

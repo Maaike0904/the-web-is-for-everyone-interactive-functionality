@@ -158,6 +158,7 @@ div {
   position: absolute;
   display: inline-block;
   align-content: right;
+  margin-left: 380px;
 }
 
 /* Dropdown Content (Hidden by Default) */
