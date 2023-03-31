@@ -502,6 +502,29 @@ footer {
 }
 
 /* Mediaquery kleiner scherm */
+@media (max-width: 1180px) {
+  .dropdown {
+    margin-left: 260px;
+  }
+}
+
+@media (max-width: 1130px) {
+  .dropdown {
+    margin-left: 230px;
+  }
+}
+
+@media (max-width: 960px) {
+  .dropdown {
+    margin-left: 155px;
+  }
+}
+
+@media (max-width: 920px) {
+  .dropdown {
+    margin-left: 130px;
+  }
+}
 
 @media (max-width: 876px) {
   .nav-links ul li {
@@ -531,6 +554,14 @@ footer {
   #calendar tr,
   #calendar tbody {
     grid-template-columns: 1fr;
+  }
+
+  .img-patroon {
+    left: 55%;
+  }
+
+  .dropdown {
+    margin-left: 60px;
   }
 
   table {
@@ -609,6 +640,14 @@ footer {
   main > div {
     display: flex;
     flex-direction: column;
+  }
+
+  .img-patroon {
+    left: 44%;
+  }
+
+  .dropdown {
+    margin-left: 7px;
   }
 
   /* Kalender */
