@@ -27,8 +27,8 @@ Progressive enhancement is een principe binnen webontwikkeling dat er voor zorgt
 ## Gebruik
 
 ## Bronnen
-[Youtube](https://www.youtube.com/watch?v=V48LbYH2UfU&ab_channel=CodingArtist) -> Image in formulier
-[Youtube](https://www.youtube.com/watch?v=8I5UCTlMa34&ab_channel=WebDevTutorials) -> Woorden doorstrepen
+* [Youtube](https://www.youtube.com/watch?v=V48LbYH2UfU&ab_channel=CodingArtist) -> Image in formulier
+* [Youtube](https://www.youtube.com/watch?v=8I5UCTlMa34&ab_channel=WebDevTutorials) -> Woorden doorstrepen
 
 ## Licentie
 
