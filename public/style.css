@@ -518,6 +518,10 @@ footer {
   .dropdown {
     margin-left: 155px;
   }
+
+  .img-patroon {
+    left: 65%;
+  }
 }
 
 @media (max-width: 920px) {
