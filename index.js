@@ -87,7 +87,7 @@ async function fetchJson(url) {
 }
 
 // route naar pinda.ejs
-app.get("/Pinda", async (request, response) => {
+server.get("/Pinda", async (request, response) => {
   let productenUrl = url + "/producten";
 
   await fetchJson(productenUrl).then((data) => {
@@ -96,11 +96,11 @@ app.get("/Pinda", async (request, response) => {
 });
 
 // pagina's zonder inhoud van andere allergenen
-app.get("/Amandel", (request, response) => {
+server.get("/Amandel", (request, response) => {
   response.render("Amandel");
 });
 
-app.get("/Schelp", (request, response) => {
+server.get("/Schelp", (request, response) => {
   response.render("Schelp");
 });
 
