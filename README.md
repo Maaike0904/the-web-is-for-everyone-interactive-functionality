@@ -18,6 +18,8 @@
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
 ## Kenmerken
+Progressive enhancement:
+Progressive enhancement is een principe binnen webontwikkeling dat er voor zorgt dat websites en webapplicaties die moderne technologieën gebruiken, toch zullen werken in browsers waarin deze functies niet worden ondersteund. De website moet altijd toegankelijk zijn.
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 
 ## Installatie
@@ -25,7 +27,8 @@
 ## Gebruik
 
 ## Bronnen
-(Youtube)[https://www.youtube.com/watch?v=V48LbYH2UfU&ab_channel=CodingArtist] -> Image in formulier
+* [Youtube](https://www.youtube.com/watch?v=V48LbYH2UfU&ab_channel=CodingArtist) -> Image in formulier
+* [Youtube](https://www.youtube.com/watch?v=8I5UCTlMa34&ab_channel=WebDevTutorials) -> Woorden doorstrepen
 
 ## Licentie
 
