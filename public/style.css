@@ -122,14 +122,8 @@ li:hover {
   transition: 0.5s;
 }
 
-.icon {
-  padding-right: 0.5em;
-  margin-bottom: -2px;
-}
-
-.icon-user {
-  padding-right: 0.5em;
-  margin-bottom: -2px;
+nav.material-symbols-outlined {
+  display: none;
 }
 
 .arrow {
@@ -562,6 +556,14 @@ footer {
 
   .img-patroon {
     left: 55%;
+  }
+
+  .material-symbols-outlined {
+    fill: 0;
+    font-weight: 400;
+    grid: 0;
+    position: relative;
+    padding: 4em;
   }
 
   .dropdown {
