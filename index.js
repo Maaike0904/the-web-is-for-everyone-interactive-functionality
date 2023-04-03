@@ -145,3 +145,4 @@ export async function postJson(url, body) {
 // - then : dan..
 // - catch : Een functie die wordt aangeroepen wanneer de belofte wordt afgewezen.Word ook gebruikt met een promise
 // - await :
+// - $ : functie/vermenigvuldigen??

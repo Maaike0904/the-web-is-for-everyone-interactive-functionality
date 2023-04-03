@@ -90,6 +90,24 @@
     <section class="fieldset-dagboek">
       <h3 class="checklist-h2">Dagboek</h3>
 
+<ul class="back-next">
+    <li><span class="back"><ion-icon class="arrow-left" name="caret-back-outline"></ion-icon></span></li>
+    <li><span class="next"><ion-icon class="arrow-right" name="caret-forward-outline"></ion-icon></span></li>
+</ul>
+
+<!-- Notities die zijn geschreven -->
+  <% notities.forEach(notitie => { %>
+      
+      <article class="notitie-slider">
+      
+          <h2>Notities  <span class="notitie-datum"><%= notitie.datum %></span></h2>
+          <h3><%= notitie.titel %></h3>
+          <p><%= notitie.beschrijving %></p>
+
+      </article>
+  <% }); %>
+
+
 <form action="/" method="post">
     
         <!-- TITEL -->
@@ -312,6 +330,7 @@
         </td>
       </tr>
     </tbody>
+
 </table>
 
 </div>
