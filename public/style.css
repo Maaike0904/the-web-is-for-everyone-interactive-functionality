@@ -87,15 +87,6 @@ p {
   position: absolute;
 }
 
-.img-patroon {
-  width: 420px;
-  position: absolute;
-  height: 443px;
-  left: 75%;
-  top: -10%;
-  z-index: -1;
-}
-
 nav {
   width: 100%;
   height: 245px;
@@ -512,10 +503,6 @@ footer {
   .dropdown {
     margin-left: 155px;
   }
-
-  .img-patroon {
-    left: 65%;
-  }
 }
 
 @media (max-width: 920px) {
@@ -552,10 +539,6 @@ footer {
   #calendar tr,
   #calendar tbody {
     grid-template-columns: 1fr;
-  }
-
-  .img-patroon {
-    left: 55%;
   }
 
   img.menu-icoon {
