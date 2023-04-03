@@ -91,16 +91,16 @@ server.get("/Pinda", async (request, response) => {
 });
 
 // pagina's andere allergenen
+server.get("/Ei", (request, response) => {
+  response.render("Ei");
+});
+
 server.get("/Amandel", (request, response) => {
   response.render("Amandel");
 });
 
 server.get("/Schelp", (request, response) => {
   response.render("Schelp");
-});
-
-server.get("/Ei", (request, response) => {
-  response.render("Ei");
 });
 
 server.get("/Soja", (request, response) => {

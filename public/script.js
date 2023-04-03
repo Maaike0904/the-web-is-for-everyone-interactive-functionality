@@ -1,10 +1,10 @@
 // Bron - https://www.youtube.com/watch?v=8I5UCTlMa34&ab_channel=WebDevTutorials
 // Doorstrepen wanneer je klikt geprobeerd (werkt nog niet)
-// const container = document.getElementsByClassName("container");
-// label.addEventListener("click", function () {
-//   label.style.textDecoration = "line-trough";
-//   console.log(container);
-// });
+const label = document.createElement("label");
+console.log("label");
+label.addEventListener("click", function () {
+  label.style.textDecoration = "line-trough";
+});
 
 // notitie carrousel
 
@@ -52,21 +52,4 @@ function showDivs(n) {
     x[i].style.display = "none";
   }
   x[slideIndex - 1].style.display = "block";
-}
-
-//   overlay form
-
-const form = document.querySelector(".form-background");
-const buttonAddNote = document.querySelector(".toevoegen-notitie");
-const clickAwayForm = document.querySelector(".click-away-form");
-
-buttonAddNote.addEventListener("click", formOverlay);
-clickAwayForm.addEventListener("click", formAway);
-
-function formOverlay() {
-  form.classList.add("form-notitie-toevoegen");
-}
-
-function formAway() {
-  form.classList.remove("form-notitie-toevoegen");
 }
