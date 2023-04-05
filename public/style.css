@@ -679,6 +679,14 @@ footer {
   position: relative;
 }
 
+.notitie-slider {
+  display: none;
+}
+
+.notitie-slider.show-slider {
+  display: block;
+}
+
 .back-next-container {
   position: absolute;
   list-style: none;
@@ -691,8 +699,9 @@ footer {
 }
 .back,
 .next {
-  display: none;
+  /* display: none; */
 }
+
 body.js-enabled .back,
 body.js-enabled .next {
   position: absolute;
