@@ -31,7 +31,7 @@ h1 {
   font-weight: 700;
   padding: 1.2em auto;
   width: 100%;
-  margin-top: -5em;
+  margin-top: 1em;
   padding-bottom: 0.5em;
 }
 
@@ -91,18 +91,19 @@ p {
 /* HET MENU */
 
 .viniminilogo {
-  width: 142px;
-  margin-top: -4em;
+  width: 120px;
+  margin-top: -2.5em;
   margin-left: -7em;
   position: absolute;
 }
 
 nav {
   width: 100%;
-  height: 245px;
+  height: 125px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  box-shadow: -1px 0 10px rgba(14, 55, 63, 0.15);
 }
 
 ul {
@@ -120,12 +121,18 @@ maar voor nu kan ik door */
 
 li {
   list-style-type: none;
-  line-height: 20px;
+  margin-top: -20px;
 }
 
 li:hover {
   color: var(--groen);
   transition: 0.5s;
+}
+
+li:active {
+  list-style-type: none;
+  margin-top: -20px;
+  color: var(--pinda);
 }
 
 img.menu-icoon {
@@ -655,7 +662,7 @@ footer {
 .slider-section-notities {
   background-color: var(--lichtgroen);
   border-radius: 1em;
-  height: 11rem;
+  height: 9rem;
   padding: 1rem 2rem;
   margin-left: 2rem;
   margin-bottom: 1rem;
@@ -900,10 +907,15 @@ body.js-enabled .toevoegen-notitie:hover {
   padding: 1em;
   border-radius: 1em;
   margin: auto;
-  margin-top: -5em;
+  margin-top: 1em;
 }
 
 .pencil {
   color: #acbbcb;
   width: 25px;
+}
+
+.sam-lijst {
+  line-height: 20px;
+  margin-top: 0;
 }
