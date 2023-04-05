@@ -40,7 +40,7 @@ function plusClick(n) {
 // [slideIndex-1] wordt gebruikt omdat bijvoorbeeld +3 eigenlijk overeenzou komen met index 2.
 function showDivs(n) {
   let i;
-  let x = document.getElementsByClassName(".notitie-slider");
+  let x = document.getElementsByClassName("notitie-slider");
   if (n > x.length) {
     slideIndex = 1;
   }
@@ -48,7 +48,7 @@ function showDivs(n) {
     slideIndex = x.length;
   }
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "block";
+    x[i].style.display = "none";
   }
   x[slideIndex - 1].style.display = "flex";
 }
