@@ -1,13 +1,12 @@
 // Bron - https://www.youtube.com/watch?v=8I5UCTlMa34&ab_channel=WebDevTutorials
 // Doorstrepen wanneer je klikt geprobeerd (werkt nog niet)
-const label = document.createElement("label");
-console.log("label");
-label.addEventListener("click", function () {
-  label.style.textDecoration = "line-trough";
-});
+// const label = document.createElement("label");
+// console.log("label");
+// label.addEventListener("click", function () {
+//   label.style.textDecoration = "line-trough";
+// });
 
 // notitie carrousel
-
 // definieer de variabelen
 const buttonLeft = document.querySelector(".back");
 const buttonRight = document.querySelector(".next");
@@ -30,10 +29,10 @@ buttonRight.addEventListener("click", function () {
 // Met showDivs(slideIndex += n); geeft die aan of de slideindex een pagina verder of terug moet gaan.
 function plusClick(n) {
   showDivs((slideIndex += n));
-  console.log("clicky");
+  console.log("click");
 }
 
-// Deze onderstaande functie showdivs besluit welke 'notitie' te zien is.
+// Deze onderstaand functie showdivs besluit welke 'notitie' te zien is.
 // n staat voor de slideindex waarde
 // x staat voor de slides
 // met de i wordt er een loop uitgevoerd, i gaat gewoon getallen langs, en zolang het getal kleiner is dan
@@ -41,7 +40,7 @@ function plusClick(n) {
 // [slideIndex-1] wordt gebruikt omdat bijvoorbeeld +3 eigenlijk overeenzou komen met index 2.
 function showDivs(n) {
   let i;
-  let x = document.getElementsByClassName("notitie-slider");
+  let x = document.getElementsByClassName(".notitie-slider");
   if (n > x.length) {
     slideIndex = 1;
   }
@@ -49,7 +48,7 @@ function showDivs(n) {
     slideIndex = x.length;
   }
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+    x[i].style.display = "block";
   }
-  x[slideIndex - 1].style.display = "block";
+  x[slideIndex - 1].style.display = "flex";
 }
