@@ -667,6 +667,48 @@ footer {
   display: block;
 }
 
+/* notitie cotainer */
+
+.notitie-container {
+  background-color: var(--Ei);
+  border-radius: 10px;
+  height: 20rem;
+  padding: 1rem 3rem;
+  margin: 1rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.back-next-container {
+  position: absolute;
+  list-style: none;
+  width: 80%;
+  padding: 0;
+  margin: 2.5rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+.back,
+.next {
+  display: none;
+}
+body.js-enabled .back,
+body.js-enabled .next {
+  position: absolute;
+  margin-left: 1.8rem;
+  scale: 2;
+  display: block;
+}
+
+.toevoegen-notitie {
+  display: none;
+}
+body.js-enabled .toevoegen-notitie:hover {
+  background-color: var(--blauw);
+  color: white;
+}
+
 @media (max-width: 600px) {
   main > div {
     display: flex;

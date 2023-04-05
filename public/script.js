@@ -7,6 +7,7 @@
 // });
 
 // notitie carrousel
+
 // definieer de variabelen
 const buttonLeft = document.querySelector(".back");
 const buttonRight = document.querySelector(".next");
@@ -29,10 +30,10 @@ buttonRight.addEventListener("click", function () {
 // Met showDivs(slideIndex += n); geeft die aan of de slideindex een pagina verder of terug moet gaan.
 function plusClick(n) {
   showDivs((slideIndex += n));
-  console.log("click");
+  console.log("clicky");
 }
 
-// Deze onderstaand functie showdivs besluit welke 'notitie' te zien is.
+// Deze onderstaand functie showdivs besluit welke 'tip' te zien is.
 // n staat voor de slideindex waarde
 // x staat voor de slides
 // met de i wordt er een loop uitgevoerd, i gaat gewoon getallen langs, en zolang het getal kleiner is dan
@@ -48,7 +49,28 @@ function showDivs(n) {
     slideIndex = x.length;
   }
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+    x[i].classList.remove("show-slider");
   }
-  x[slideIndex - 1].style.display = "flex";
+  x[slideIndex - 1].classList.add("show-slider");
 }
+
+//   overlay form
+
+const form = document.querySelector(".form-background");
+const buttonAddNote = document.querySelector(".toevoegen-notitie");
+const clickAwayForm = document.querySelector(".click-away-form");
+
+buttonAddNote.addEventListener("click", formOverlay);
+clickAwayForm.addEventListener("click", formAway);
+
+function formOverlay() {
+  form.classList.add("form-notitie-toevoegen");
+}
+
+function formAway() {
+  form.classList.remove("form-notitie-toevoegen");
+}
+
+// JavaScript Enabled?
+
+document.body.classList.add("js-enabled");

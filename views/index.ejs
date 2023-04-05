@@ -90,16 +90,17 @@
 </ul>
 
 <!-- Notities die zijn geschreven -->
-  <% notities.forEach(notitie => { %>
-      
-      <article class="notitie-slider">
-      
-          <h2>Notities  <span class="notitie-datum"><%= notitie.datum %></span></h2>
-          <h3><%= notitie.titel %></h3>
-          <p><%= notitie.beschrijving %></p>
-
-      </article>
-  <% }); %>
+<% notities.forEach(notitie => { %>
+     
+    <article class="notitie-container notitie-slider">
+    
+        <h2>Notities  <span class="datum"><%= notitie.datum %></span></h2>
+        <h3><%= notitie.titel %></h3>
+        <p><%= notitie.beschrijving %></p>
+   
+        <button class="toevoegen-notitie">+ Notitie Toevoegen</button>
+    </article>
+<% }); %>
 
 </div>
 
