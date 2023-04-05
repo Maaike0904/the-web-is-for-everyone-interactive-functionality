@@ -123,6 +123,10 @@ server.get("/Cashewnoot", (request, response) => {
   response.render("Cashewnoot");
 });
 
+server.get("/account", (request, response) => {
+  response.render("account");
+});
+
 export async function postJson(url, body) {
   return await fetch(url, {
     method: "post",
