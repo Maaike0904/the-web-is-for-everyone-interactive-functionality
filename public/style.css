@@ -126,6 +126,11 @@ div {
   display: block;
 }
 
+.pinda-icoon {
+  width: 30px;
+  height: 30px;
+}
+
 /* Style The Dropdown Button */
 .dropbtn {
   background-color: var(--lichtgroen);
@@ -629,36 +634,40 @@ footer {
   }
 }
 
+/* notitie cotainer */
+
 .slider-section-notities {
-  background-color: var(--Ei);
-  border-radius: 10px;
-  height: 20rem;
-  padding: 1rem 3rem;
-  margin: 1rem;
-  margin-top: 2rem;
+  background-color: var(--lichtgroen);
+  border-radius: 1em;
+  height: 11rem;
+  padding: 1rem 2rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
   position: relative;
 }
 
 .notitie-slider {
   background-color: var(--Ei);
-  border-radius: 10px;
+  border-radius: 2em;
   height: 20rem;
-  padding: 1rem 3rem;
-  margin: 1rem;
-  margin-top: 2rem;
+  padding: 1rem 4rem;
+  /* margin: 0rem;
+  margin-top: 0rem; */
   position: relative;
 }
 
 .back-next {
   position: absolute;
   list-style: none;
-  width: 30%;
+  width: 78%;
   padding: 0;
-  margin: 2.5rem 0rem;
+  margin: 4rem -1.5rem;
   display: flex;
   justify-content: space-between;
   z-index: 100;
 }
+
 .back,
 .next {
   position: absolute;
@@ -667,20 +676,9 @@ footer {
   display: block;
 }
 
-/* notitie cotainer */
-
-.notitie-container {
-  background-color: var(--Ei);
-  border-radius: 10px;
-  height: 20rem;
-  padding: 1rem 3rem;
-  margin: 1rem;
-  margin-top: 2rem;
-  position: relative;
-}
-
 .notitie-slider {
   display: none;
+  width: 20em;
 }
 
 .notitie-slider.show-slider {
