@@ -2,7 +2,7 @@
 
 # Vini Mini - Dagboek
 <img width="1421" alt="Scherm­afbeelding 2023-04-06 om 09 23 53" src="https://user-images.githubusercontent.com/112861144/230304629-bd33b0ad-5c9c-45b3-842a-d5d7bcaac375.png">
-Een dynamische kalender waarin je het schema van je Mini kunt zien.
+Een dynamische kalender waarin je het schema van je Mini kunt zien en aantekeningen kunt maken.
 
 ## Inhoudsopgave
 
