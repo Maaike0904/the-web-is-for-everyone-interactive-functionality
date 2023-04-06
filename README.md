@@ -1,7 +1,8 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+# Vini Mini - Dagboek
+<img width="1421" alt="Scherm­afbeelding 2023-04-06 om 09 23 53" src="https://user-images.githubusercontent.com/112861144/230304629-bd33b0ad-5c9c-45b3-842a-d5d7bcaac375.png">
+Een dynamische kalender waarin je het schema van je Mini kunt zien.
 
 ## Inhoudsopgave
 
@@ -13,9 +14,10 @@
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+Ik heb voor user story #13 gekozen:
+> Als ouder wil ik in een dagboek aantekeningen kunnen maken zodat ik niet vergeet wat er is gebeurd.
+
+:globe: [Live link](https://zany-jade-gopher-robe.cyclic.app/)
 
 ## Kenmerken
 Progressive enhancement:
