@@ -17,7 +17,7 @@ Een dynamische kalender waarin je het schema van je Mini kunt zien en aantekenin
 Ik heb voor user story #13 gekozen:
 > Als ouder wil ik in een dagboek aantekeningen kunnen maken zodat ik niet vergeet wat er is gebeurd.
 
-:globe: [Live link](https://zany-jade-gopher-robe.cyclic.app/)
+🌐 [Live link](https://zany-jade-gopher-robe.cyclic.app/)
 
 ## 👓  Kenmerken
 Progressive enhancement:
